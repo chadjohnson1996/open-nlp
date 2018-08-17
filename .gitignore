@@ -7,8 +7,11 @@
 *.sh
 *.bin
 
+
 *.xml
 
 *.zip
 
 *.jar
+
+.idea/
