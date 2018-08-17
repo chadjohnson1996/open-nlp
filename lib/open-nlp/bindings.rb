@@ -16,7 +16,7 @@ module OpenNLP::Bindings
 
   # Turn logging off by default.
   self.log_file = nil
-
+=begin
   # Default JARs to load.
   self.default_jars = [
     'jwnl-1.3.3.jar',
@@ -24,7 +24,15 @@ module OpenNLP::Bindings
     'opennlp-maxent-3.0.2-incubating.jar',
     'opennlp-uima-1.5.2-incubating.jar'
   ]
+=end
 
+  self.default_jars = [
+    'jwnl-1.3.3.jar',
+    'opennlp-tools-1.9.0.jar',
+    'opennlp-brat-annotator-1.9.0.jar',
+    'opennlp-morfologik-addon-1.9.0.jar',
+    'opennlp-uima-1.9.0.jar'
+  ]
   # Default namespace.
   self.default_namespace = 'opennlp.tools'
 
@@ -73,7 +81,7 @@ module OpenNLP::Bindings
   end
 
   def self.default_path
-    File.dirname(__FILE__) + '/../../bin/'
+    File.dirname(__FILE__) + "/bin/"
   end
 
   # The loaded models.
@@ -131,5 +139,4 @@ module OpenNLP::Bindings
     self.model_files[name] = file
     self.models[name] = model
   end
-
 end

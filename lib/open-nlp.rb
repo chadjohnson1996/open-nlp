@@ -31,5 +31,6 @@ module OpenNLP
   def self.method_missing(sym, *args, &block)
     OpenNLP::Bindings.send(sym, *args, &block)
   end
-
+  self.load
+  puts 'hit this line'
 end
